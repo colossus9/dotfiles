@@ -1,0 +1,47 @@
+Host *.brew.sh
+	User brewadmin
+	ForwardAgent yes
+
+Host remote.github.net remote.github.com
+	ForwardAgent yes
+	User mikemcquaid
+
+Host linux-vm
+	HostName 172.16.42.141
+
+Host *.github.com *.github.net *.githubapp.com
+	ForwardAgent no
+	User mikemcquaid
+
+Host * !heroku.com !github.com !github.net
+	RemoteForward 52698 localhost:52698
+
+Host macstadium-debian
+	HostName 207.254.3.11
+	ForwardAgent yes
+	Port 55141
+	User brew
+
+Host macstadium-esx-1
+	HostName 10.88.172.131
+
+Host macstadium-esx-2
+	HostName 10.88.172.132
+
+Host macstadium-esx-3
+	HostName 10.88.172.133
+
+Host macstadium-esx-*
+	ProxyJump macstadium-debian
+	User root
+
+Host *
+	StrictHostKeyChecking ask
+	VerifyHostKeyDNS ask
+	NoHostAuthenticationForLocalhost yes
+	IdentityFile ~/.ssh/id_ed25519
+	IdentityFile ~/.ssh/id_rsa
+	UseKeychain yes
+	AddKeysToAgent yes
+	ControlMaster auto
+	ControlPath /tmp/ssh-%r@%h:%p.socket

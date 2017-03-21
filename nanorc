@@ -4,6 +4,7 @@ include /usr/local/share/nano/awk.nanorc
 include /usr/local/share/nano/c.nanorc
 include /usr/local/share/nano/changelog.nanorc
 include /usr/local/share/nano/cmake.nanorc
+include /usr/local/share/nano/coffee.nanorc
 include /usr/local/share/nano/css.nanorc
 include /usr/local/share/nano/debian.nanorc
 include /usr/local/share/nano/default.nanorc

@@ -1,6 +1,12 @@
 [user]
 	name = 
 	email = 
+	
+[github]
+	user = 
+
+[gpg]
+	program = gpg
 
 [include]
 	# path = ~/.gitconfig-user
@@ -52,6 +58,7 @@
 	cp = cherry-pick
 	br = branch
 	co = checkout
+	dad = !curl https://icanhazdadjoke.com/ && git add
 	df = diff -C --color-words
 	pl = !git pull --rebase origin $(git cb)
 	ps = !git push origin $(git cb)
@@ -270,3 +277,6 @@
 [commit]
 	# Show the diff as a comment in the commit message template.
 	verbose = true
+
+# [http]
+# 	sslVerify = false

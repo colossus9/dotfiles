@@ -1,9 +1,10 @@
 [user]
-	name = 
-	email = 
+	name =
+	email =
+	signingkey =
 	
 [github]
-	user = 
+	user =
 
 [gpg]
 	program = gpg
@@ -21,7 +22,8 @@
 
 [push]
 	# Push to the set upstream branch being tracked by default.
-	default = simple
+	#default = simple
+	default = current
 
 [fetch]
 	# Always prune when fetching (and pulling).
@@ -233,10 +235,10 @@
 
 [rebase]
 	# Run `git stash` if needed before a `git rebase`
-	autoStash = true
+	#autoStash = true
 
 	# Auto-add `--autosquash` to `git rebase`
-	autoSquash = true
+	#autoSquash = true
 
 [url "git@github.com:"]
 	# Always use GitHub SSH protocol to push.

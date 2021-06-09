@@ -1,10 +1,10 @@
 [user]
-	name =
-	email =
-	signingkey =
-	
+	name = James Garcia
+	email = colossus9@github.com
+	signingkey = 689E22424CF3C5DF
+
 [github]
-	user =
+	user = colossus9
 
 [gpg]
 	program = gpg
@@ -81,6 +81,12 @@
 	delete-tag = "!f() { git tag -d $1; git push origin :refs/tags/$1; }; f"
 	info = !sh -c 'git-info' -    # requires https://github.com/gitbits/git-info
 	submodule-list = !git ls-files --stage | grep 16000
+	make-pr=status
+	bb=branch --sort=-committerdate
+	words=diff --color-words=.
+	ll = "log --pretty=oneline --abbrev-commit"
+	lol = "log --pretty=oneline --abbrev-commit --graph --decorate"
+	lola = "log --pretty=oneline --abbrev-commit --graph --decorate --all"
 
 	# Unstage the changes in a given file.
 	unstage = reset HEAD --
@@ -188,6 +194,8 @@
 
 	# Diff against the current branch's merge-base
 	diff-merge-base = !git diff $(git merge-base-master)
+	hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
+	mylog = log --pretty=format:'%h %s [%an]' --graph
 
 [instaweb]
 	# Use the Ruby WEBRick library when creating a `git instaweb`
@@ -282,3 +290,5 @@
 
 # [http]
 # 	sslVerify = false
+[pull]
+	rebase = false

@@ -1,73 +1,108 @@
-tap 'caskroom/cask'
-tap 'github/bootstrap'
-tap 'homebrew/bundle'
-tap 'homebrew/core'
-tap 'homebrew/services'
-tap 'homebrew/test-bot'
-tap 'homebrew/versions'
-cask 'java'
-brew 'autoconf'
-brew 'cmake'
-brew 'doxygen'
-brew 'elasticsearch@1.7', restart_service: true
-brew 'git'
-brew 'grc'
-brew 'heroku'
-brew 'hub'
-brew 'icu4c'
-brew 'oniguruma'
-brew 'jq'
-brew 'node'
-brew 'jsonlint'
-brew 'launch_socket_server', restart_service: true
-brew 'launchdns', restart_service: true
-brew 'openssl'
-brew 'libevent'
-brew 'mas'
-brew 'memcached', restart_service: true
-brew 'mysql@5.6', restart_service: true
-brew 'openssl@1.1'
-brew 'pcre'
-brew 'nginx', restart_service: true
-brew 'pkg-config'
-brew 'ruby-build'
-brew 'rbenv'
-brew 'rbenv-default-gems'
-brew 'readline'
-brew 'redis', restart_service: true
-brew 'ripgrep'
-brew 'shellcheck'
-brew 'ssh-copy-id'
-cask 'appcleaner'
-cask 'doxie'
-cask 'flux'
-cask 'github-desktop'
-cask 'google-chrome'
-cask 'keepingyouawake'
-cask 'qbserve'
-cask 'quitter'
-cask 'screenhero'
-cask 'sizeup'
-cask 'steam'
-cask 'subler'
-cask 'textexpander'
-cask 'textmate'
-cask 'transmission'
-cask 'vagrant'
-cask 'viscosity'
-cask 'vmware-fusion'
-cask 'zoomus'
-mas 'Remote Desktop', id: 409907375
-mas 'Xcode', id: 497799835
-mas 'Keynote', id: 409183694
-mas 'iMovie', id: 408981434
-mas 'Mactracker', id: 430255202
-mas '1Password', id: 443987910
-mas 'OneDrive', id: 823766827
-mas 'Sketch', id: 402476602
-mas 'Slack', id: 803453959
-mas 'Pages', id: 409201541
-mas 'Pixelmator', id: 407963104
-mas 'Reeder', id: 880001334
-mas 'Textual', id: 896450579
-mas 'Numbers', id: 409203825
+tap "github/bootstrap"
+tap "github/gh"
+tap "github/packages", "git@github.com:github/homebrew-packages.git"
+tap "homebrew/bundle"
+tap "homebrew/cask"
+tap "homebrew/core"
+tap "homebrew/services"
+tap "kyoh86/tap"
+tap "octo-cli/octo"
+tap "teamookla/speedtest"
+brew "openssl@3"
+brew "autoconf"
+brew "automake"
+brew "aws-iam-authenticator"
+brew "readline"
+brew "awscli"
+brew "azure-cli"
+brew "bash"
+brew "glib"
+brew "certstrap"
+brew "cmake"
+brew "container-diff"
+brew "coreutils"
+brew "docker", link: false
+brew "docx2txt"
+brew "dos2unix"
+brew "gh"
+brew "git-filter-repo"
+brew "git-lfs"
+brew "git-sizer"
+brew "go"
+brew "glide"
+brew "libksba"
+brew "gnupg"
+brew "golang-migrate"
+brew "icu4c"
+brew "openjdk"
+brew "gradle"
+brew "grails"
+brew "groovy"
+brew "libtool"
+brew "pkg-config"
+brew "hey"
+brew "hivemind"
+brew "hugo"
+brew "hyperscan"
+brew "imagemagick"
+brew "jansson"
+brew "jemalloc"
+brew "jq"
+brew "kubectl@1.14"
+brew "kustomize@2.0"
+brew "launch_socket_server"
+brew "launchdns"
+brew "lcov"
+brew "libsodium"
+brew "libyaml"
+brew "lnav"
+brew "maven"
+brew "md5sha1sum", link: false
+brew "memcached", restart_service: true
+brew "mercurial"
+brew "minikube"
+brew "mkcert"
+brew "zlib"
+brew "mysql"
+brew "protobuf"
+brew "mysql@5.7", restart_service: true
+brew "nano"
+brew "nginx"
+brew "node@12"
+brew "node@14"
+brew "nss"
+brew "overmind"
+brew "pandoc"
+brew "parallel"
+brew "pidof"
+brew "postgresql@14"
+brew "pyenv"
+brew "rakudo-star"
+brew "ruby-build"
+brew "rbenv"
+brew "redis", restart_service: true
+brew "richgo"
+brew "schema-evolution-manager"
+brew "shellcheck"
+brew "socat"
+brew "softhsm"
+brew "subversion"
+brew "telnet"
+brew "terraform"
+brew "tree"
+brew "vale"
+brew "yq"
+brew "github/bootstrap/kustomize@3.1"
+brew "github/packages/awssume"
+brew "teamookla/speedtest/speedtest"
+cask "balenaetcher"
+cask "codeql"
+cask "graphiql"
+cask "insomnia"
+cask "keystore-explorer"
+cask "macdown"
+cask "mysqlworkbench"
+cask "pgadmin4"
+cask "sequel-ace"
+cask "wkhtmltopdf"
+cask "zulu8"

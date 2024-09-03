@@ -1,0 +1,45 @@
+#
+#  Completion for azds:
+#
+#  azds [commands]
+#  azds controller [options]
+#  azds down [options]
+#  azds exec [options]
+#  azds list [options]
+#  azds prep [options]
+#  azds show-context [options]
+#  azds space [options]
+#  azds up [options]
+#
+_azds()
+{
+    local cur prev opts exec
+    COMPREPLY=()
+    exec="azds"
+    cur="${COMP_WORDS[COMP_CWORD]}"
+    prev="${COMP_WORDS[COMP_CWORD-1]}"
+    opts="controller down exec list-uris list-up prep remove show-context space up use"
+    globalopts="--version -v|--verbose -q|--quiet -h|--help -o|--output"
+    if [[ ${cur} == -* ]] ; then
+        COMPREPLY=( $(compgen -W "${globalopts}" -- ${cur}) )
+        return 0
+    fi
+
+    case "${prev}" in
+        ${exec})
+            COMPREPLY=( $(compgen -W "${opts}" -- ${cur}) )
+            return 0
+            ;;
+        controller)
+            COMPREPLY=( $(compgen -W "create list select" -- ${cur}) )
+            return 0
+            ;;
+        space)
+            COMPREPLY=( $(compgen -W "remove list select" -- ${cur}) )
+            return 0
+            ;;
+        *)
+        ;;
+    esac
+}
+complete -F _azds azds
